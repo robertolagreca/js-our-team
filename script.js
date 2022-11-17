@@ -44,12 +44,21 @@ let arrayData = [
     }
 ]
 
-
 //MILESTONE 1
 for(const member of arrayData){
+
         getMember(member);
+        
+        
 }
 
+//MILESTONE 2
+let containerMember = document.querySelector("#member");
+let container = document.createElement("div");
+printMember();
+
+//funzione per Milestone 1
+//stampo su console tutte le posizioni degli array con tutte le proprietà
 function getMember (m){
 
     console.log(
@@ -61,4 +70,30 @@ function getMember (m){
 --------------------------------------
          `
     );
+  
 }
+
+//funzione per Milestone 2
+//ciclo for che prende le proprietà dell'array
+    //per ogni posizione dell'array viene creata una lista in DOM
+    //a questa lista viene data una classe
+
+    //all'interno un altro ciclo for che prende ogni singola proprietà
+    //all'interno di ogni posizione e le stampa nella lista creata
+
+    function printMember (){    
+      for (const member of arrayData) {
+        const list = document.createElement("ul");
+        list.setAttribute("class", member);
+        
+        for (const key in member) {
+          const liElement = document.createElement("li");
+          liElement.innerHTML = key + " : " + member[key]; // `${key}:${member[key]}` trovata in questo modo.
+          list.appendChild(liElement);
+        }
+        container.appendChild(list);
+      }
+      containerMember.appendChild(container);
+    }
+
+    //containerMember.innerHTML += '<p>' + getM + '</p>';
