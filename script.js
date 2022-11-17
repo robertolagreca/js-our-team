@@ -12,6 +12,7 @@
 
 //MILESTONE 0
 let arrayData = [
+    
     {
         Name: "Wayne Barnett",
         Role: "Founder & CEO",
@@ -106,17 +107,40 @@ function getMember (m){
       containerMembers.appendChild(containerListMember);
     }
 
-    //Prove per stampare array di oggetti su DOM.
-    /* arrayData.map(v => {
-        document.write(v.Name)
-        document.write(v.Role)
-        document.write(v.Photo)
+
+
+    //------------------------PROVE------------------------//
+
+    //Prove per stampare array di oggetti su DOM e Console.
+    /*
+     arrayData.map(m => {
+        document.write(m.Name)
+        document.write(m.Role)
+        document.write(m.Photo)
     });
 
     document.write(
-        arrayData.map(a => Object.values(a).join(' ')).join('<br>')
+        arrayData.map(m => Object.values(m).join(' ')).join('<br>')
       ); 
 
     for( i=0; i<arrayData.length; i++){
         document.write(arrayData[i].Name+" "+arrayData[i].Role+" "+arrayData[i].Photo.padEnd(3)+"------");
-     }*/
+     }
+
+     console.log(Array.prototype.join.call(arrayData)); 
+     //con quest'ultima riga per funzionare bisogna dare una length all'array es. length:3 
+     //e i nomi delle proprietè devo essere dei numeri.
+
+     es.
+    const arrayLike = {
+        length: 3,
+        0: 2,
+        1: 3,
+        2: 4,
+      };
+     
+     const iterator = arrayData.values();
+    for (const value of iterator) {
+        console.log(value);
+    }
+     */
