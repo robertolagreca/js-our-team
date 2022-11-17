@@ -58,8 +58,9 @@ for(const member of arrayData){
 //MILESTONE 2
 //seleziono contenitore con id member
 //dentro creo un div nel quale finirà la lista dei membri
-let containerMember = document.querySelector("#member");
-let container = document.createElement("div");
+//Attivo funzione che stampa i membri su DOM creando delle liste
+let containerMembers = document.querySelector("#container-member");
+let containerListMember = document.createElement("div");
 printMember();
 
 
@@ -93,16 +94,29 @@ function getMember (m){
     function printMember (){    
       for (const member of arrayData) {
         const list = document.createElement("ul");
-        list.setAttribute("class", member);
+        list.setAttribute("id", "member");
         
         for (const key in member) {
           const liElement = document.createElement("li");
           liElement.innerHTML = key + " : " + member[key]; // `${key}:${member[key]}` trovata in questo modo.
           list.appendChild(liElement);
         }
-        container.appendChild(list);
+        containerListMember.appendChild(list);
       }
-      containerMember.appendChild(container);
+      containerMembers.appendChild(containerListMember);
     }
 
-    //containerMember.innerHTML += '<p>' + getM + '</p>';
+    //Prove per stampare array di oggetti su DOM.
+    /* arrayData.map(v => {
+        document.write(v.Name)
+        document.write(v.Role)
+        document.write(v.Photo)
+    });
+
+    document.write(
+        arrayData.map(a => Object.values(a).join(' ')).join('<br>')
+      ); 
+
+    for( i=0; i<arrayData.length; i++){
+        document.write(arrayData[i].Name+" "+arrayData[i].Role+" "+arrayData[i].Photo.padEnd(3)+"------");
+     }*/
