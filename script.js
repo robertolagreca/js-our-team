@@ -60,10 +60,11 @@ for(const member of arrayData){
 //seleziono contenitore con id member
 //dentro creo un div nel quale finirà la lista dei membri
 //Attivo funzione che stampa i membri su DOM creando delle liste
-let containerMembers = document.querySelector("#container-member");
+//inserendole all'intenno del div con id container-members
+let containerMembers = document.querySelector("#container-members");
 let containerListMember = document.createElement("div");
 printMember();
-
+containerMembers.appendChild(containerListMember);
 
 
 //funzione per Milestone 1
@@ -102,9 +103,9 @@ function getMember (m){
           liElement.innerHTML = key + " : " + member[key]; // `${key}:${member[key]}` trovata in questo modo.
           list.appendChild(liElement);
         }
+
         containerListMember.appendChild(list);
       }
-      containerMembers.appendChild(containerListMember);
     }
 
 
