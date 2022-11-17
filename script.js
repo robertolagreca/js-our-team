@@ -44,18 +44,25 @@ let arrayData = [
     }
 ]
 
+
+
 //MILESTONE 1
 for(const member of arrayData){
 
         getMember(member);
-        
-        
+           
 }
 
+
+
 //MILESTONE 2
+//seleziono contenitore con id member
+//dentro creo un div nel quale finirà la lista dei membri
 let containerMember = document.querySelector("#member");
 let container = document.createElement("div");
 printMember();
+
+
 
 //funzione per Milestone 1
 //stampo su console tutte le posizioni degli array con tutte le proprietà
@@ -73,13 +80,15 @@ function getMember (m){
   
 }
 
+
+
 //funzione per Milestone 2
 //ciclo for che prende le proprietà dell'array
     //per ogni posizione dell'array viene creata una lista in DOM
     //a questa lista viene data una classe
 
     //all'interno un altro ciclo for che prende ogni singola proprietà
-    //all'interno di ogni posizione e le stampa nella lista creata
+    //di ogni posizione e le stampa nella lista creata
 
     function printMember (){    
       for (const member of arrayData) {
