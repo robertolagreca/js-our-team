@@ -62,8 +62,7 @@ for(const member of arrayData){
 //Attivo funzione che stampa i membri su DOM creando delle liste
 //inserendole all'intenno del div con id container-members
 let containerMembers = document.querySelector("#container-members");
-let containerListMember = document.createElement("div");
-printMember();
+let containerListMember = printContainerMembers(arrayData);
 containerMembers.appendChild(containerListMember);
 
 
@@ -93,7 +92,10 @@ function getMember (m){
     //all'interno un altro ciclo for che prende ogni singola proprietà
     //di ogni posizione e le stampa nella lista creata
 
-    function printMember (){    
+    function printContainerMembers (arrayData){  
+        
+     let containerListMember = document.createElement("div");
+
       for (const member of arrayData) {
         const list = document.createElement("ul");
         list.setAttribute("id", "member");
