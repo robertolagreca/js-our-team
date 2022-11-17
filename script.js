@@ -5,33 +5,51 @@
 
 let arrayData = [
     {
-        Nome: "Wayne Barnett",
-        Ruolo: "Founder & CEO",
-        Foto: "wayne-barnett-founder-ceo.jpg"
+        Name: "Wayne Barnett",
+        Role: "Founder & CEO",
+        Photo: "wayne-barnett-founder-ceo.jpg"
     },
     {
-        Nome: "Angela Caroll",
-        Ruolo: "Chief Editor",
-        Foto: "angela-caroll-chief-editor.jpg"
+        Name: "Angela Caroll",
+        Role: "Chief Editor",
+        Photo: "angela-caroll-chief-editor.jpg"
     },
     {
-        Nome: "Walter Gordon",
-        Ruolo: "Office Manager",
-        Foto: "walter-gordon-office-manager.jpg"
+        Name: "Walter Gordon",
+        Role: "Office Manager",
+        Photo: "walter-gordon-office-manager.jpg"
     },
     {
-        Nome: "Angela Lopez",
-        Ruolo: "Social Media Manager",
-        Foto: "angela-lopez-social-media-manager.jpg"
+        Name: "Angela Lopez",
+        Role: "Social Media Manager",
+        Photo: "angela-lopez-social-media-manager.jpg"
     },
     {
-        Nome: "Scott Estrada",
-        Ruolo: "Developer",
-        Foto: "scott-estrada-developer.jpg"
+        Name: "Scott Estrada",
+        Role: "Developer",
+        Photo: "scott-estrada-developer.jpg"
     },
     {
-        Nome: "Barbara Ramos",
-        Ruolo: "Graphic Designer",
-        Foto: "barbara-ramos-graphic-designer.jpg"
+        Name: "Barbara Ramos",
+        Role: "Graphic Designer",
+        Photo: "barbara-ramos-graphic-designer.jpg"
     }
 ]
+
+for(const member of arrayData){
+        getMember(member);
+}
+
+function getMember (m){
+
+    console.log(
+        `
+-------------- Membro ----------------
+    Nome: ${m.Name}
+    Ruolo: ${m.Role}
+    Foto: ${m.Photo}
+--------------------------------------
+
+        `
+    );
+}
